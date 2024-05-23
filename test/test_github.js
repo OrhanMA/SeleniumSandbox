@@ -8,7 +8,19 @@ const {
 const assert = require("assert");
 
 (async function test_function() {
-  let driver = await new Builder().forBrowser("chrome").build();
+  // let driver = await new Builder().forBrowser("chrome").build();
+
+  // let chrome = require("selenium-webdriver/chrome");
+  // let options = new chrome.Options();
+
+  // options.setMobileEmulation({ deviceName: "iPhone 14 Pro Max" });
+
+  // let driver = await new Builder()
+  //   .forBrowser("chrome")
+  //   .setChromeOptions(options)
+  //   .build();
+
+  let driver = await new Builder().forBrowser("firefox").build();
 
   try {
     await driver.get("https://github.com/");
